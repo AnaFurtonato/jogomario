@@ -1,0 +1,85 @@
+*{
+    padding: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.palco-game{
+    width: 100%;
+    height: 625px;
+    border-bottom: 15px solid #008103;
+    margin: 0 auto; /* Para ver a área do jogo*/
+    position: relative; /* Para que os elementos não sobreponham um ao outro*/
+    overflow: hidden;
+    background: linear-gradient(#87CEEB, #E0F6FF);
+
+}
+
+.cano{
+    position: absolute; 
+    bottom: 0;
+    width: 80px;
+    animation: cano-animation 2s infinite linear;
+}
+
+/* Animação do cano, onde ele fica passando dentro da tela */
+@keyframes cano-animation{
+    from{
+        right: 0;
+
+        right: -80px;
+    }
+
+    to{
+        right: 100%;
+    }
+}
+
+.mario{
+    width: 150px;
+    position: absolute;
+    bottom: 0px;
+}
+
+.pulo{
+    animation: mario-animation 500ms ease-out;
+}
+
+/* Animação do mario, onde ele fica pulando o cano */   
+@keyframes mario-animation {
+    0% {bottom: 0;}
+
+    40%{bottom: 180px;}
+
+    50%{bottom: 180px;}
+
+    60%{bottom: 180px;}
+
+    100%{bottom: 0;}   
+    
+}
+
+.nuvem{
+    position: absolute;
+    width: 430px;
+    animation: nuvem-animation 10s infinite linear;
+}
+
+
+
+
+/* Animação da nuvem */  
+@keyframes nuvem-animation {
+    from {
+        right: -550px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+
+    
+    
