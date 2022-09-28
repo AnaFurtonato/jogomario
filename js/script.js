@@ -20,17 +20,17 @@ const loop = setInterval(()=>{
     if (canoPosition <= 120 && canoPosition >= 0 && marioPosition < 100) {
 
         cano.style.animation = 'none';
-        cano.style.left = `${canoPosition}px`
+        cano.style.left = `${canoPosition}px`;
 
         mario.style.animation = 'none';
-        mario.style.bottom = `${marioPosition}px`
+        mario.style.bottom = `${marioPosition}px`;
 
-        mario.src = '../img/game-over.png';
+        mario.src = './img/game-over.png';
         mario.style.width = '75px';
         mario.style.marginLeft = '50px';   
         
        
-        alert('Game Over!!! Reinicie a pagina para jogar novamente') 
+       
 
         clearInterval(loop);
         
